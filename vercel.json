@@ -2,15 +2,12 @@
   "buildCommand": "pnpm build",
   "installCommand": "pnpm install",
   "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
   "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs18.x"
+    "dist/index.js": {
+      "runtime": "nodejs20.x"
     }
   }
 }
